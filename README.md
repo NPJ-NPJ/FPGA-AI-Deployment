@@ -66,7 +66,9 @@ python3 inspect_float_model.py
 ```
 
 ### 4.Quantise the model 
-```python3 quantize_model.py
+```
+python3 quantize_model.py
+
 ```
 
 ### 5. Compile the model for the FPGA (Here the model is combiled for Kria KV260, DPU DPUCZDX8G)
