@@ -1,0 +1,8 @@
+{
+    "lib": "libvart-dpu-runner.so",
+    "filename": "CA_II_LAB2_model.xmodel",
+    "kernel": [
+        "subgraph_quant_avg_pool_fix"
+    ],
+    "target": "DPUCZDX8G_ISA1_B4096"
+}

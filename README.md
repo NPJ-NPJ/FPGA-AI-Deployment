@@ -73,7 +73,7 @@ python3 quantize_model.py
 
 ### 5. Compile the model for the FPGA (Here the model is combiled for Kria KV260, DPU DPUCZDX8G)
 ```bash 
- vai_c_tensorflow2 -m quantized/quantized.h5 -a /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json -o ./compiled -n resnet50
+ vai_c_tensorflow2 -m quantized/quantized.h5 -a /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json -o ./compiled -n compiled_model
 ```
 
 ## FPGA Setup and Inference Deployment Guide

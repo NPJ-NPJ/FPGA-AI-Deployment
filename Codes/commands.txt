@@ -1,0 +1,8 @@
+./docker_run.sh xilinx/vitis-ai-tensorflow2-cpu:latest
+
+vai_c_tensorflow2 -m quantized/quantized.h5 -a /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json -o ./compiled -n Compiled_model
+
+sudo picocom -b 115200 -r -l /dev/ttyUSB<x>   # Replace ’x’ with the correct serial port 
+
+scp -r <folder_to_copy> root@<ip_address_of_the_board>:/home/root/<destination_folder>
+
