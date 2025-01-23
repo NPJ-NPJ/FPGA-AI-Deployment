@@ -51,29 +51,30 @@ The repository includes the following files and resources:
 
 ### 1. Environment Setup
 - Install **Vitis AI 3.5** and **Docker** (v19.03+).  
-- Clone this repository and navigate to the directory:
-  ```bash
-  cd path/to/repo
+
 
 
 ### 2. Launch Vitis AI Docker Container
-- Use the following command to launch the container:
+- Use the following command to launch the tensorflow2 container:
   ```bash
   ./docker_run.sh xilinx/vitis-ai-tensorflow2-cpu:latest
 
 
 ### 3. Inspect the Float Model
+```
 python3 inspect_float_model.py
-
+```
 
 ### 4.Quantise the model 
-python3 quantize_model.py
-
+```python3 quantize_model.py
+```
 
 ### 5. Compile the model for the FPGA (Here the model is combiled for Kria KV260, DPU DPUCZDX8G)
-vai_c_tensorflow2 -m quantized/quantized.h5 -a /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json -o ./compiled -n resnet50
+```bash 
+ vai_c_tensorflow2 -m quantized/quantized.h5 -a /opt/vitis_ai/compiler/arch/DPUCZDX8G/KV260/arch.json -o ./compiled -n resnet50
+```
 
-### FPGA Setup and Inference Deployment Guide
+## FPGA Setup and Inference Deployment Guide
 
 ### 4. Set Up the FPGA Board
 
